@@ -703,7 +703,7 @@ for (let n = 0; n < N; n++) {
     pk = Math.max(pk, Math.abs(M[c][n]));
   }
 }
-const norm = 0.89 / pk;
+const norm = 0.56 / pk; // techo bajo: deja margen para picos entre muestras (true peak) tras el AAC
 
 // ---------- WAV ----------
 const out = Buffer.alloc(44 + N * 4);
