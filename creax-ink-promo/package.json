@@ -1,0 +1,15 @@
+{
+  "name": "creax-ink-promo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Video promocional 9:16 de CREAX.INK (render por código + constructor para After Effects)",
+  "scripts": {
+    "music": "node tools/music.cjs",
+    "render": "node tools/music.cjs && node tools/render.cjs",
+    "stills": "node tools/render.cjs --stills 1.9,9.5,15.6,27.9,31.8,39.9",
+    "preview": "npx --yes http-server . -p 8080 -c-1 -o /src/index.html"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.1"
+  }
+}

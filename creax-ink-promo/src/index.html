@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CREAX.INK Promo</title>
+<style>
+  @font-face { font-family: 'Montserrat'; src: url(../assets/fonts/Montserrat-Variable.woff2) format('woff2'); font-weight: 100 900; font-style: normal; }
+  @font-face { font-family: 'Montserrat'; src: url(../assets/fonts/Montserrat-Italic-Variable.woff2) format('woff2'); font-weight: 100 900; font-style: italic; }
+  @font-face { font-family: 'Caveat'; src: url(../assets/fonts/Caveat-Variable.woff2) format('woff2'); font-weight: 400 700; }
+  html, body { margin: 0; background: #050507; color: #ddd; font: 14px/1.4 system-ui, sans-serif; }
+  #stage { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 12px; }
+  canvas { display: block; height: calc(100vh - 90px); max-width: 100%; aspect-ratio: 9 / 16; background: #000; }
+  #ui { display: flex; gap: 10px; align-items: center; width: min(560px, 100%); }
+  #ui input[type=range] { flex: 1; }
+  #ui button { background: #222; color: #fff; border: 1px solid #444; border-radius: 6px; padding: 6px 12px; cursor: pointer; }
+  body.render #ui { display: none; }
+  body.render #stage { padding: 0; }
+  body.render canvas { height: auto; width: 1080px; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="c" width="1080" height="1920"></canvas>
+  <div id="ui">
+    <button id="play">▶︎ Play</button>
+    <input id="scrub" type="range" min="0" max="1199" value="0">
+    <span id="tc">00:00:00</span>
+  </div>
+</div>
+<audio id="music" src="../output/creax-ink-music.wav" preload="auto"></audio>
+<script src="config.js"></script>
+<script src="lib.js"></script>
+<script src="assets.js"></script>
+<script src="works.js"></script>
+<script src="scenes.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
